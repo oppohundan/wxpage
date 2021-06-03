@@ -1,0 +1,32 @@
+<!-- <video id = 'myVideo' controls = 'ture'></video>
+<view class= 'danmuArea'>
+  <input type = 'text' 
+  placeholder = "请输入弹幕"></input>
+  <button size = 'mini'>发送弹幕</button>
+  <view class = "sta"></view>
+</view>
+<view>
+  <button>喜欢</button>
+  <button>收藏</button>
+  <button>分享</button>
+</view>
+<block wx:for = "{{textArray}}" wx:for-item = "item1">
+  <block wx:for="{{item1}}" wx:for-item = "item2">
+    <view class = "line"></view>
+    <view class = "iten" id = "{{item2.id}}">
+      <view class = "head">
+        <view>
+          <image src = "{{item2.user.medium}}" style = "width:45%; height:45%"></image>
+        </view>
+        <view class = "title">{{item2.user.login}}</view>
+        <view class = "hot">
+          <image src = "../../image/icon/hot.jpg" style = "width:14%; height:16%"></image>
+        </view>
+      </view>
+      <view class = "content"></view>
+      <view class = "sta"></view>
+      <view class = "icon"></view>
+    </view>
+
+  </block>
+</block> -->

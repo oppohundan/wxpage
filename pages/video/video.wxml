@@ -1,0 +1,86 @@
+<video id="myVideo" controls="ture"
+  src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"></video>
+<!-- 用户名以及关注 -->
+<view class="user">
+  <image class="touxiang" src="https://p0.ssl.qhimgs1.com/sdr/400__/t0184ee38a8e64996e6.jpg"></image>
+  <view class="username">{{name}}</view>
+  <button style="width: 140rpx;margin-right: 5%;" class="guanzhu" bindtap="dianji">+关注</button>
+</view>
+<!-- 作品名字 -->
+<view class="zuopinname">{{zuopin}}</view>
+<!-- 播放弹幕时间简介 -->
+<view class="three">
+  <view class="bofangnum">
+    <image mode='scaleToFill' style="height: 27rpx;width: 30rpx" src="../image/1.png"></image>
+    <text style="font-size: 20rpx;color: #bfbfbf;">bof258</text>
+  </view>
+  <view class="danmunum">
+    <image mode='aspectFit' style="height: 27rpx;width: 30rpx" src="../image/2.png"></image>
+    <text style="font-size: 20rpx;color: #bfbfbf;">danm25</text>
+  </view>
+  <view class="time">2020-1-1</view>
+</view>
+<view class="jianjie">一串简介。</view>
+<!-- 喜欢收藏分享 -->
+<view class="sanlian">
+  <button style="background: white;color: black;font-size: 25rpx;" bindtap="xihuan">
+    <image mode='aspectFit' style="height: 40rpx;width: 40rpx" src="../image/喜欢.png"></image>
+    <view>喜欢</view>
+    <view>{{like}}</view>
+  </button>
+  <button style="background: white;color: black;font-size: 25rpx;" bindtap="shoucang">
+    <image mode='aspectFit' style="height: 40rpx;width: 40rpx" src="../image/收藏.png"></image>
+    <view>收藏</view>
+    <view>{{collection}}</view>
+  </button>
+  <button style="background: white;color: black;font-size: 25rpx;" bindtap="fenxiang">
+    <image mode='aspectFit' style="height: 40rpx;width: 40rpx" src="../image/分享.png"></image>
+    <view>分享</view>
+    <view>{{share}}</view>
+  </button>
+</view>
+<!-- 整个评论区 -->
+<view class='talks-layer' animation='{{talksAnimationData}}'>
+  <!-- 评论区 -->
+  <view class='talks' bindtouchstart='touchStart' bindtouchmove='touchMove'>
+    <!-- 评论头部 -->
+    <view class='talk-header'>
+      <view class='talk-count'>{{talks.length}} 条评论</view>
+    </view>
+    <!-- 评论体 -->
+    <scroll-view class='talk-body' scroll-y="true" bindscrolltolower="onScrollLoad">
+      <view class='talk-item' wx:for="{{talks}}" wx:key="*this">
+        <view class='talk-item-left'>
+          <image class='talk-item-face' src='{{item.avatarUrl}}'></image>
+        </view>
+        <view class='talk-item-right'>
+          <view class='right-left'>
+            <view class='talk-item-nickname'>{{item.nickName}}</view>
+            <view class='talk-item-time'>{{item.talkTime}}</view>
+          </view>
+          <text class='talk-item-content'>{{item.content}}</text>
+          <view class="tubiao">
+            <!-- 点赞点踩分享回复更多 -->
+            <image mode='aspectFit' style="height: 30rpx;width: 30rpx;margin: 10rpx 10rpx 15rpx 0;" src="../image/喜欢.png"></image>
+            <image mode='aspectFit' style="height: 32rpx;width: 32rpx;margin: 15rpx;" src="../image/踩.png"></image>
+            <image mode='aspectFit' style="height: 34rpx;width: 34rpx;margin: 10rpx;" src="../image/转发.png"></image>
+            <image mode='aspectFit' style="height: 32rpx;width: 32rpx;margin: 10rpx 0 0 380rpx;" src="../image/更多.png"></image>
+          </view>
+        </view>
+      </view>    
+      <view class="jieshu">╮(╯3╰)╭再怎么找也没有啦</view>
+    </scroll-view>
+
+    <!-- 评论底部 -->
+    <view class="cf-bg" catchtap="cemojiCfBg" style="display:{{cfBg ? 'block' : 'none'}}"></view>
+    <view class=" {{isShow ?'footer_boxmovein' : 'talk-footer'}}">
+      <view class='footer_box'>
+        <input class='talk-input' type='text' value='{{inputValue}}' bindblur="bindInputBlur"
+          placeholder='发一条友善的评论'></input>
+      </view>
+      <button class='fabu-input' bindtap='faBu' style="background: white;width: 100rpx;">
+        <image mode='aspectFit' style="height: 50rpx;width: 50rpx" src="../image/笑脸.png"></image>
+      </button>
+    </view>
+  </view>
+</view>

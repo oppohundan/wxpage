@@ -1,0 +1,22 @@
+<!-- 用户名以及联系 -->
+<view class="headpart">
+  <view class="user">
+    <image class="touxiang" src="https://p0.ssl.qhimgs1.com/sdr/400__/t0184ee38a8e64996e6.jpg"></image>
+    <view class="username">{{name}}
+      <view class="twhere">{{time}}前发布于{{where}}</view>
+    </view>
+    <button style="width: 190rpx;margin-right: 5%;" class="lianxi" bindtap="lianxi">联系</button>
+  </view> 
+</view>
+<!-- 价格 -->
+<view class="price">￥{{money}}/{{day}}</view>
+<!-- 详情 -->
+<view class="xiangqing">芥川龙之介头发外套衬衫西装裤皮鞋面具六件套
+  <view>均码
+    <view>全新</view>
+  </view>
+</view>
+<!-- 商品图片 -->
+<view class="picture">
+  <image mode='aspectFill' style="height: 900rpx;width: 100%" src="https://p1.ssl.qhimgs1.com/sdr/400__/t0170fc01fc16410ea1.jpg"></image>
+</view>

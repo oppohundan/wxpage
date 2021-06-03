@@ -1,0 +1,57 @@
+/* 用户名和关注 */
+.headpart{
+  border-bottom: solid 3rpx #bfbfbf;
+}
+.user {
+  display: flex;
+  background: white;
+  width: 92%;
+  height: 100rpx;
+  padding: 20rpx;
+  padding-left: 8%;
+}
+.touxiang {
+  height: 95rpx;
+  width: 95rpx;
+  border-radius: 50%;
+}
+.username {
+  color: black;
+  font-size: 30rpx;
+  margin-left: 2%;
+}
+.twhere{
+  width: 100%;
+  display: flex;
+  color: black;
+  font-size: 22rpx;
+  padding: 3% 0 0 0;
+  margin-left: 2%;
+}
+.lianxi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 27rpx;
+  color: white;
+  background: #48decc;
+  border-radius: 50rpx;
+  height: 50rpx;
+  padding: 0%;
+  margin: 3%;
+}
+/* 价格、详情、商品图 */
+.price {
+  font-size: 50rpx;
+  font-weight: 700;
+  color: #FF3333;
+  padding: 4% 0 0 5%;
+}
+.xiangqing{
+  font-size: 50rpx;
+  color: black;
+  padding: 5%;
+}
+.picture{
+  padding: 0 5%;
+}
